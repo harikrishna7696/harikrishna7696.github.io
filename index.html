@@ -11,39 +11,76 @@
       background-color: #f4f4f4;
       color: #333;
     }
+
+    /* Header background with overlay */
     header {
+      position: relative;
+      height: 100vh;
       background: url('https://images.unsplash.com/photo-1581090700227-1e8eec1c48d3') center/cover no-repeat;
-      color: white;
-      padding: 6rem 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
+      color: white;
     }
-    header h1 {
-      font-size: 3rem;
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+    header h1, header p {
+      z-index: 2;
       margin: 0;
     }
-    header p {
-      font-size: 1.3rem;
-      margin-top: 0.5rem;
+    header h1 {
+      font-size: 3.5rem;
+      font-weight: bold;
     }
+    .typewriter {
+      margin-top: 1rem;
+      font-size: 1.3rem;
+      white-space: nowrap;
+      border-right: 2px solid white;
+      overflow: hidden;
+      width: 0;
+      animation: typing 4s steps(40, end) forwards, blink 0.75s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
+
     section {
       padding: 2rem;
       max-width: 1000px;
       margin: auto;
       background: white;
-      margin-top: 1.5rem;
+      margin-top: 2rem;
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
+
     h2 {
       color: #0077cc;
       border-bottom: 2px solid #0077cc;
       padding-bottom: 0.3rem;
     }
+
     .skills-grid {
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
     }
+
     .skill-badge {
       background: #0077cc;
       color: white;
@@ -51,20 +88,24 @@
       border-radius: 20px;
       font-weight: bold;
     }
+
     .project {
       margin-bottom: 1.5rem;
     }
+
     .project-title {
       font-size: 1.1rem;
       font-weight: bold;
       color: #0077cc;
     }
+
     footer {
       text-align: center;
       margin-top: 2rem;
       padding: 1rem;
       color: #777;
     }
+
     a {
       color: #0077cc;
       text-decoration: none;
@@ -75,7 +116,7 @@
 
   <header>
     <h1>Hari Krishna</h1>
-    <p>Computer Vision Engineer | AI Inference Optimizer | Deep Learning Enthusiast</p>
+    <p class="typewriter">Computer Vision Engineer | AI Inference Optimizer | Deep Learning Enthusiast</p>
   </header>
 
   <section>
