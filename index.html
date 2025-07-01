@@ -12,7 +12,6 @@
       color: #e0e0e0;
     }
 
-    /* Header (card-sized) */
     header {
       position: relative;
       background: url('https://images.unsplash.com/photo-1581090700227-1e8eec1c48d3') center/cover no-repeat;
@@ -54,17 +53,15 @@
       background-size: 600% 600%;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      animation: gradientLight 8s ease infinite, typing 4s steps(40, end) forwards, blink 0.75s step-end infinite;
       white-space: nowrap;
       overflow: hidden;
-      border-right: 2px solid #fff;
       width: 0;
+      animation: typing 4s steps(40, end) forwards, gradientLight 8s ease infinite;
+      border-right: 2px solid #fff;
     }
 
-    @keyframes gradientLight {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
+    .typewriter.done {
+      border-right: none;
     }
 
     @keyframes typing {
@@ -72,8 +69,10 @@
       to { width: 100% }
     }
 
-    @keyframes blink {
-      50% { border-color: transparent }
+    @keyframes gradientLight {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     section {
@@ -187,5 +186,12 @@
   <footer>
     &copy; 2025 Hari Krishna | Powered by GitHub Pages
   </footer>
+
+  <script>
+    // Remove blinking cursor after typing finishes
+    setTimeout(() => {
+      document.querySelector('.typewriter').classList.add('done');
+    }, 4000); // Matches typing animation duration
+  </script>
 </body>
 </html>
