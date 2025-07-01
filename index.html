@@ -3,36 +3,61 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hari Krishna | Portfolio</title>
+  <title>Hari Krishna | Computer Vision Engineer</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      background: #f4f4f4;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f4;
       color: #333;
     }
     header {
-      background: #1e90ff;
+      background: url('https://images.unsplash.com/photo-1581090700227-1e8eec1c48d3') center/cover no-repeat;
       color: white;
-      padding: 2rem 1rem;
+      padding: 6rem 2rem;
       text-align: center;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+    header p {
+      font-size: 1.3rem;
+      margin-top: 0.5rem;
     }
     section {
       padding: 2rem;
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
       background: white;
-      margin-top: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      margin-top: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
     h2 {
-      color: #1e90ff;
+      color: #0077cc;
+      border-bottom: 2px solid #0077cc;
+      padding-bottom: 0.3rem;
     }
-    ul {
-      list-style: square;
-      padding-left: 1.5rem;
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .skill-badge {
+      background: #0077cc;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 20px;
+      font-weight: bold;
+    }
+    .project {
+      margin-bottom: 1.5rem;
+    }
+    .project-title {
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #0077cc;
     }
     footer {
       text-align: center;
@@ -41,40 +66,52 @@
       color: #777;
     }
     a {
-      color: #1e90ff;
+      color: #0077cc;
       text-decoration: none;
     }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Hari Krishna</h1>
-    <p>AI & Computer Vision Enthusiast | Developer</p>
+    <p>Computer Vision Engineer | AI Inference Optimizer | Deep Learning Enthusiast</p>
   </header>
 
   <section>
     <h2>About Me</h2>
-    <p>Hello! I'm Hari Krishna, passionate about building AI systems, especially in the areas of computer vision and model optimization. I love solving real-world problems using technology.</p>
+    <p>I specialize in building efficient and accurate computer vision solutions, with deep expertise in model optimization, inference acceleration, and deployment. I work with YOLO, TensorRT, OpenCV, and PyTorch to create production-ready AI systems.</p>
   </section>
 
   <section>
-    <h2>Skills</h2>
-    <ul>
-      <li>Python, C++ (Learning)</li>
-      <li>PyTorch, TensorRT</li>
-      <li>Computer Vision, OpenCV</li>
-      <li>Docker, MLOps, Git</li>
-      <li>ROS (beginner)</li>
-    </ul>
+    <h2>Tech Stack</h2>
+    <div class="skills-grid">
+      <div class="skill-badge">Python</div>
+      <div class="skill-badge">OpenCV</div>
+      <div class="skill-badge">YOLOv7</div>
+      <div class="skill-badge">TensorRT</div>
+      <div class="skill-badge">PyTorch</div>
+      <div class="skill-badge">ONNX</div>
+      <div class="skill-badge">Docker</div>
+      <div class="skill-badge">ROS</div>
+      <div class="skill-badge">MLOps</div>
+    </div>
   </section>
 
   <section>
-    <h2>Projects</h2>
-    <ul>
-      <li><strong>YOLOv7-TensorRT Integration</strong> – Improved AI inference speed by 3x using TensorRT. <a href="#">View</a></li>
-      <li><strong>Image Augmentation Microservice</strong> – Deployed scalable image augmentation as a Docker service. <a href="#">View</a></li>
-      <li><strong>Object Detection Platform</strong> – Real-time deployment of custom object detectors. <a href="#">View</a></li>
-    </ul>
+    <h2>Featured Projects</h2>
+    <div class="project">
+      <div class="project-title">YOLOv7 TensorRT Integration</div>
+      <p>Converted YOLOv7 to TensorRT, boosting inference speed from 94 FPS to 293 FPS. Reduced hardware usage while preserving accuracy. <a href="#">[View Code]</a></p>
+    </div>
+    <div class="project">
+      <div class="project-title">Real-Time Object Detection Platform</div>
+      <p>Built an end-to-end real-time detection system with event generation. Integrated OpenCV, RabbitMQ, and PyTorch for high-throughput vision pipelines.</p>
+    </div>
+    <div class="project">
+      <div class="project-title">Augmentation Microservice</div>
+      <p>Developed and deployed an image augmentation microservice using Docker & Flask, integrated into an MLOps pipeline.</p>
+    </div>
   </section>
 
   <section>
@@ -87,7 +124,7 @@
   </section>
 
   <footer>
-    &copy; 2025 Hari Krishna. All rights reserved.
+    &copy; 2025 Hari Krishna | Powered by GitHub Pages
   </footer>
 </body>
 </html>
