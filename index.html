@@ -83,10 +83,11 @@
     }
 
     section.content {
-      padding: 0 3rem;
-      max-width: 1200px;
-      margin: 2rem auto;
+      padding: 2rem 3rem;
+      margin: 0;
+      max-width: 100%;
     }
+
 
     .skills-grid {
       display: flex;
@@ -193,6 +194,18 @@
       color: #000;
     }
 
+    .hero-avatar {
+      width: 512px;
+      height: auto;
+      object-fit: contain;
+      border-radius: 50px;
+      background: transparent;
+      box-shadow: none;
+      mix-blend-mode: lighten;
+    }
+
+
+
     @keyframes fadeInUp {
       from {
         opacity: 0;
@@ -220,7 +233,7 @@
       <p class="subtext">Specializing in Deep Learning · TensorRT · Model Optimization · Vision at Scale</p>
     </div>
     <div class="hero-right">
-      <lottie-player src="https://lottie.host/73cd8855-230f-40d1-94d3-fc0e47779e70/szEkG0LxQ6.json" background="transparent" speed="1" loop autoplay></lottie-player>
+      <img src="gibli_profile.png" alt="Hari Krishna" class="hero-avatar"/>
     </div>
   </section>
 
