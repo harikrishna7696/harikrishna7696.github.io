@@ -6,19 +6,13 @@
   <title>Hari Krishna | AI Engineer</title>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Montserrat', sans-serif;
       background: #0f0f0f;
       color: white;
       overflow-x: hidden;
     }
-
     .hero {
       display: flex;
       justify-content: space-between;
@@ -26,47 +20,42 @@
       padding: 3rem;
       min-height: 100vh;
     }
-
     .hero-left {
       flex: 1;
       padding: 2rem;
     }
-
     .hero-left h1 {
       font-family: 'Anton', sans-serif;
       font-size: 4rem;
       line-height: 1.2;
     }
-
     .hero-left h1 span {
       display: inline-block;
       animation: fadeInUp 1s ease-in-out forwards;
       opacity: 0;
     }
-
     .hero-left h1 span:nth-child(1) { animation-delay: 0.3s; }
     .hero-left h1 span:nth-child(2) { animation-delay: 0.6s; }
     .hero-left h1 span:nth-child(3) { animation-delay: 0.9s; }
-
     .subtext {
       margin-top: 1rem;
       font-weight: 300;
       color: #aaa;
       font-size: 1.1rem;
     }
-
     .hero-right {
       flex: 1;
       display: flex;
       justify-content: center;
       align-items: center;
     }
-
-    .hero-right lottie-player {
-      width: 320px;
-      height: 320px;
+    .hero-right img {
+      width: 512px;
+      height: auto;
+      object-fit: contain;
+      border-radius: 50px;
+      mix-blend-mode: lighten;
     }
-
     .section-separator {
       height: 2px;
       width: 100%;
@@ -74,27 +63,22 @@
       margin: 4rem 0 2rem;
       border: none;
     }
-
     .section-header {
       font-family: 'Anton', sans-serif;
       font-size: 2.2rem;
       margin-bottom: 1rem;
       color: white;
     }
-
     section.content {
       padding: 2rem 3rem;
       margin: 0;
       max-width: 100%;
     }
-
-
     .skills-grid {
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
     }
-
     .skill-badge {
       background: #0077cc;
       color: white;
@@ -102,13 +86,11 @@
       border-radius: 20px;
       font-weight: bold;
     }
-
     .project-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
       gap: 1.5rem;
     }
-
     .project-card {
       background: #1a1a1a;
       padding: 1rem;
@@ -116,43 +98,35 @@
       box-shadow: 0 0 10px rgba(0,0,0,0.3);
       transition: transform 0.3s;
     }
-
     .project-card:hover {
       transform: translateY(-5px);
     }
-
     .project-title {
       font-size: 1.1rem;
       font-weight: bold;
       color: #00bfff;
     }
-
     footer {
       text-align: center;
       margin-top: 2rem;
       padding: 1rem;
       color: #888;
     }
-
     a {
       color: #00bfff;
       text-decoration: none;
     }
-
     a:hover {
       text-decoration: underline;
     }
-
     .fade-in {
       opacity: 0;
       transform: translateY(20px);
     }
-
     .fade-in.visible {
       opacity: 1;
       transform: translateY(0);
     }
-
     #backToTop {
       position: fixed;
       bottom: 30px;
@@ -169,11 +143,9 @@
       display: none;
       transition: opacity 0.3s ease;
     }
-
     #backToTop:hover {
       background-color: #009acd;
     }
-
     .resume-btn {
       position: fixed;
       bottom: 30px;
@@ -188,36 +160,15 @@
       font-weight: bold;
       backdrop-filter: blur(5px);
     }
-
     .resume-btn:hover {
       background-color: #00bfff;
       color: #000;
     }
-
-    .hero-avatar {
-      width: 512px;
-      height: auto;
-      object-fit: contain;
-      border-radius: 50px;
-      background: transparent;
-      box-shadow: none;
-      mix-blend-mode: lighten;
-    }
-
-
-
     @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
-  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 <body>
   <button id="backToTop" title="Back to Top">↑</button>
@@ -233,30 +184,31 @@
       <p class="subtext">Specializing in Deep Learning · TensorRT · Model Optimization · Vision at Scale</p>
     </div>
     <div class="hero-right">
-      <img src="gibli_profile.png" alt="Hari Krishna" class="hero-avatar"/>
+      <img src="gibli_profile.png" alt="Hari Krishna"/>
     </div>
   </section>
 
   <hr class="section-separator" />
   <section class="content fade-in">
     <h2 class="section-header">About Me</h2>
-    <p>I specialize in building efficient and accurate computer vision solutions, with deep expertise in model optimization, inference acceleration, and deployment. I work with YOLO, TensorRT, OpenCV, and PyTorch to create production-ready AI systems.</p>
+    <p>
+      I’m a Computer Vision Engineer with hands-on experience in real-time image and video processing. I specialize in deploying pretrained deep learning models, optimizing inference pipelines, and building resource-efficient AI systems. I enjoy improving system throughput using TensorRT, Docker, Pillow, and Python multiprocessing—without needing heavy framework modifications.
+    </p>
   </section>
 
   <hr class="section-separator" />
   <section class="content fade-in">
-    <h2 class="section-header">Tech Stack</h2>
-    <div class="skills-grid">
-      <div class="skill-badge">Python</div>
-      <div class="skill-badge">OpenCV</div>
-      <div class="skill-badge">YOLOv7</div>
-      <div class="skill-badge">TensorRT</div>
-      <div class="skill-badge">PyTorch</div>
-      <div class="skill-badge">ONNX</div>
-      <div class="skill-badge">Docker</div>
-      <div class="skill-badge">ROS</div>
-      <div class="skill-badge">MLOps</div>
-    </div>
+    <h2 class="section-header">Professional Experience</h2>
+    <p><strong>Computer Vision Engineer – ZestloT Technologies</strong> <br>
+    <em>Feb 2023 – Present | Hyderabad, India</em></p>
+    <ul>
+      <li>Promoted from intern to full-time for delivering high-impact R&D solutions.</li>
+      <li>Integrated YOLOv7 into production pipelines, improving detection accuracy and speed.</li>
+      <li>Optimized models using TensorRT, boosting inference speed 2× and halving memory usage.</li>
+      <li>Replaced OpenCV with Pillow for 50% faster processing and lower CPU/RAM use.</li>
+      <li>Resolved multiprocessing issues, enabling parallel model inference in real time.</li>
+      <li>Containerized preprocessing via Docker for seamless integration with MLOps pipeline.</li>
+    </ul>
   </section>
 
   <hr class="section-separator" />
@@ -265,20 +217,60 @@
     <div class="project-grid">
       <div class="project-card">
         <div class="project-title">YOLOv7 TensorRT Integration</div>
-        <p>Converted YOLOv7 to TensorRT, boosting inference speed from 94 FPS to 293 FPS. Reduced hardware usage while preserving accuracy. <a href="#">[View Code]</a></p>
+        <p>Boosted inference from 94 FPS to 293 FPS while cutting down hardware usage by half.</p>
       </div>
       <div class="project-card">
-        <div class="project-title">Real-Time Object Detection Platform</div>
-        <p>Built an end-to-end real-time detection system with event generation. Integrated OpenCV, RabbitMQ, and PyTorch for high-throughput vision pipelines.</p>
+        <div class="project-title">Real-Time Detection Platform</div>
+        <p>Built an end-to-end event generation system with OpenCV, RabbitMQ, and PyTorch.</p>
       </div>
       <div class="project-card">
-        <div class="project-title">Augmentation Microservice</div>
-        <p>Developed and deployed an image augmentation microservice using Docker & Flask, integrated into an MLOps pipeline.</p>
+        <div class="project-title">Image Augmentation Microservice</div>
+        <p>Packaged Flask-based augmentation service into Docker and plugged into MLOps platform.</p>
+      </div>
+      <div class="project-card">
+        <div class="project-title">Dataset Analyzer CLI Tool</div>
+        <p>Created a wrapper over the data-gradients library to auto-generate dataset health reports. <a href="https://github.com/harikrishna7696/Analyze_Cv_Dataset" target="_blank">[View Code]</a></p>
       </div>
     </div>
   </section>
 
   <hr class="section-separator" />
+  <section class="content fade-in">
+    <h2 class="section-header">Tech Stack</h2>
+    <div class="skills-grid">
+      <div class="skill-badge">Python</div>
+      <div class="skill-badge">C++</div>
+      <div class="skill-badge">YOLOv7</div>
+      <div class="skill-badge">TensorRT</div>
+      <div class="skill-badge">PyTorch</div>
+      <div class="skill-badge">OpenCV</div>
+      <div class="skill-badge">Pillow</div>
+      <div class="skill-badge">FFmpeg</div>
+      <div class="skill-badge">MediaMTX</div>
+      <div class="skill-badge">Docker</div>
+      <div class="skill-badge">RabbitMQ</div>
+      <div class="skill-badge">Redis</div>
+      <div class="skill-badge">Label Studio</div>
+      <div class="skill-badge">Git</div>
+      <div class="skill-badge">MLOps</div>
+    </div>
+  </section>
+
+  <hr class="section-separator" />
+  <section class="content fade-in">
+    <h2 class="section-header">Education</h2>
+    <p><strong>Bachelor in Computer Applications</strong> – Government Degree College<br>
+    <em>Jan 2019 – Sep 2022 | GPA: 7.8</em></p>
+  </section>
+
+  <hr class="section-separator" />
+  <section class="content fade-in">
+    <h2 class="section-header">Achievements</h2>
+    <p><strong>🏆 Innovator of the Month</strong> – Recognized for optimizing platform components and contributing impactful R&D solutions.</p>
+  </section>
+
+  <hr class="section-separator" />
+
   <section class="content fade-in">
     <h2 class="section-header">Contact</h2>
     <p>
